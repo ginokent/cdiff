@@ -1,7 +1,7 @@
 # cdiff
 Colored diff made with shell script.  
 
-## Install
+## Installation
 
 ```bash
 # for curl
