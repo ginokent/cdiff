@@ -22,5 +22,16 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 #
+# ---
+#
+# Install
+#
+#   # for curl
+#   sudo bash -cx "curl -LR https://github.com/djeeno/kubectl-wrapper/releases/latest/download/kubectl -o /usr/local/bin/kubectl && chmod -v +x /usr/local/bin/kubectl"
+#
+#   # for wget
+#   sudo bash -cx "wget -c https://github.com/djeeno/kubectl-wrapper/releases/latest/download/kubectl -O /usr/local/bin/kubectl && chmod -v +x /usr/local/bin/kubectl"
+#
+
 cdiff() { (P=printf C="\033" R=$($P "$C\[31m");G=$($P "$C\[32m");B=$($P "$C\[36m");W=$($P "$C\[1m");N=$($P "$C\[0m");diff -u "$@"|sed "s/^\(@@..*@@\)$/$B\1$N/;s/^\(+.*\)/$G\1$N/;s/^\(-.*\)/$R\1$N/;s/^$G\(+++ [^ ].*\)/$W\1/;s/^$R\(--- [^ ].*\)/$W\1/;")}
 cdiff "$@"
